@@ -20,7 +20,7 @@
 	-->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Coming Soon Page</title>
+	<title>Plumpees Coming Soon</title>
 
 	<meta name="generator" content="comingsoonpage.com 1.0.0" />
 	<meta name="description" content="">
@@ -60,11 +60,9 @@
 	
 	html{
 		height:100%;
-		background: #ffffff url(resources/images/background_three.png); no-repeat center bottom fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
+		background: #64cce3 url(resources/images/background_three.png) center top fixed;
+        background-repeat: no-repeat;
+		background-size: 600px;
 	}
 
 	#cspio-page{
@@ -74,6 +72,7 @@
 	.flexbox #cspio-page{
 		align-items: center;
 		justify-content: center;
+        flex-direction: column;
 	}
 
 	.cspio body{
@@ -227,6 +226,23 @@
 		background-color:transparent;
 	}
     
+    .flexbox #cspio-content {
+		margin-top: 40vh;
+	}
+
+    #cspio-video {
+		display: none;
+		max-width: 600px;
+		background-color: #000000;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box;
+		background-color:transparent;
+        display: flex;
+	}
+    
 	.cspio .progress-bar,
 	.countdown_section,
 	.cspio .btn-primary,
@@ -313,18 +329,24 @@
 			<span id="cspio-privacy-policy-txt">We promise to never spam you.</span>
 			    						    			    								    			    			    				
 			<div id="cspio-socialprofiles">
+                <a href="https://www.youtube.com/channel/UClPHRJMXfk6-1XKRwZ2M_tA" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>		
 				<a href="https://www.instagram.com/plumpees2018/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>			
 				<a href="https://twitter.com/plumpees2018" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>			
-				<a href="mailto:engon.plumpees@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>			
-			</div>
-
-
-									    									    			    			    							    			     			    		
+				<a href="mailto:engon.plumpees@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>	
+			</div>						    									    			    			    							    			     			    		
 		</div><!-- end of #cspio-content -->
+        <div id="cspio-video" >
+            <video controls>
+                <source src="resources/video/gardenPortrait.mp4" type="video/mp4">
+            </video> 
+             <video controls>
+                <source src="resources/video/islandPortrait.mp4" type="video/mp4">
+            </video>
+            </div>
 	</div>
 
 
-	<script>
+    <script>
 		// Animate Delay
 		setTimeout(function(){ jQuery("#cspio-content").show().addClass('animated fadeIn'); }, 250);
 
